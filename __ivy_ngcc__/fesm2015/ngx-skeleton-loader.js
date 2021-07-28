@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 /**
  * @fileoverview added by tsickle
- * Generated from: lib/ngx-skeleton-loader-config.types.ts
+ * Generated from: lib/ngx-skeletor-loader-config.types.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -37,11 +37,11 @@ if (false) {
     NgxSkeletonLoaderConfig.prototype.ariaLabel;
 }
 /** @type {?} */
-const NGX_SKELETON_LOADER_CONFIG = new InjectionToken('ngx-skeleton-loader.config');
+const NGX_SKELETON_LOADER_CONFIG = new InjectionToken('ngx-skeletor-loader.config');
 
 /**
  * @fileoverview added by tsickle
- * Generated from: lib/ngx-skeleton-loader.component.ts
+ * Generated from: lib/ngx-skeletor-loader.component.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class NgxSkeletonLoaderComponent {
@@ -128,7 +128,7 @@ class NgxSkeletonLoaderComponent {
     }
 }
 NgxSkeletonLoaderComponent.ɵfac = function NgxSkeletonLoaderComponent_Factory(t) { return new (t || NgxSkeletonLoaderComponent)(ɵngcc0.ɵɵdirectiveInject(NGX_SKELETON_LOADER_CONFIG, 8)); };
-NgxSkeletonLoaderComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: NgxSkeletonLoaderComponent, selectors: [["ngx-skeleton-loader"]], inputs: { appearance: "appearance", animation: "animation", theme: "theme", loadingText: "loadingText", count: "count", ariaLabel: "ariaLabel" }, features: [ɵngcc0.ɵɵNgOnChangesFeature], decls: 1, vars: 1, consts: [["class", "loader", "aria-busy", "true", "aria-valuemin", "0", "aria-valuemax", "100", "role", "progressbar", "tabindex", "0", 3, "ngClass", "ngStyle", 4, "ngFor", "ngForOf"], ["aria-busy", "true", "aria-valuemin", "0", "aria-valuemax", "100", "role", "progressbar", "tabindex", "0", 1, "loader", 3, "ngClass", "ngStyle"]], template: function NgxSkeletonLoaderComponent_Template(rf, ctx) { if (rf & 1) {
+NgxSkeletonLoaderComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: NgxSkeletonLoaderComponent, selectors: [["ngx-skeletor-loader"]], inputs: { appearance: "appearance", animation: "animation", theme: "theme", loadingText: "loadingText", count: "count", ariaLabel: "ariaLabel" }, features: [ɵngcc0.ɵɵNgOnChangesFeature], decls: 1, vars: 1, consts: [["class", "loader", "aria-busy", "true", "aria-valuemin", "0", "aria-valuemax", "100", "role", "progressbar", "tabindex", "0", 3, "ngClass", "ngStyle", 4, "ngFor", "ngForOf"], ["aria-busy", "true", "aria-valuemin", "0", "aria-valuemax", "100", "role", "progressbar", "tabindex", "0", 1, "loader", 3, "ngClass", "ngStyle"]], template: function NgxSkeletonLoaderComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵtemplate(0, NgxSkeletonLoaderComponent_span_0_Template, 1, 9, "span", 0);
     } if (rf & 2) {
         ɵngcc0.ɵɵproperty("ngForOf", ctx.items);
@@ -148,7 +148,7 @@ NgxSkeletonLoaderComponent.propDecorators = {
 /*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(NgxSkeletonLoaderComponent, [{
         type: Component,
         args: [{
-                selector: 'ngx-skeleton-loader',
+                selector: 'ngx-skeletor-loader',
                 template: "<span\n  *ngFor=\"let item of items\"\n  class=\"loader\"\n  [attr.aria-label]=\"ariaLabel\"\n  aria-busy=\"true\"\n  aria-valuemin=\"0\"\n  aria-valuemax=\"100\"\n  [attr.aria-valuetext]=\"loadingText\"\n  role=\"progressbar\"\n  tabindex=\"0\"\n  [ngClass]=\"{\n    circle: appearance === 'circle',\n    progress: animation === 'progress',\n    'progress-dark': animation === 'progress-dark',\n    pulse: animation === 'pulse'\n  }\"\n  [ngStyle]=\"theme\"\n>\n</span>\n",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [".loader{background:#eff1f6 no-repeat;border-radius:4px;box-sizing:border-box;display:inline-block;height:20px;margin-bottom:10px;overflow:hidden;position:relative;width:100%;will-change:transform}.loader:after,.loader:before{box-sizing:border-box}.loader.circle{border-radius:50%;height:40px;margin:5px;width:40px}.loader.progress,.loader.progress-dark{transform:translateZ(0)}.loader.progress-dark:after,.loader.progress-dark:before,.loader.progress:after,.loader.progress:before{box-sizing:border-box}.loader.progress-dark:before,.loader.progress:before{-webkit-animation:progress 2s ease-in-out infinite;animation:progress 2s ease-in-out infinite;background-size:200px 100%;content:\"\";height:100%;left:0;position:absolute;top:0;width:200px;z-index:1}.loader.progress:before{background-image:linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.6),hsla(0,0%,100%,0))}.loader.progress-dark:before{background-image:linear-gradient(90deg,transparent,rgba(0,0,0,.2),transparent)}.loader.pulse{-webkit-animation:pulse 1.5s cubic-bezier(.4,0,.2,1) infinite;-webkit-animation-delay:.5s;animation:pulse 1.5s cubic-bezier(.4,0,.2,1) infinite;animation-delay:.5s}@media (prefers-reduced-motion:reduce){.loader.progress,.loader.progress-dark,.loader.pulse{-webkit-animation:none;animation:none}.loader.progress,.loader.progress-dark{background-image:none}}@-webkit-keyframes progress{0%{transform:translate3d(-200px,0,0)}to{transform:translate3d(calc(200px + 100vw),0,0)}}@keyframes progress{0%{transform:translate3d(-200px,0,0)}to{transform:translate3d(calc(200px + 100vw),0,0)}}@-webkit-keyframes pulse{0%{opacity:1}50%{opacity:.4}to{opacity:1}}@keyframes pulse{0%{opacity:1}50%{opacity:.4}to{opacity:1}}"]
@@ -194,7 +194,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * Generated from: lib/ngx-skeleton-loader.module.ts
+ * Generated from: lib/ngx-skeletor-loader.module.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class NgxSkeletonLoaderModule {
@@ -246,10 +246,10 @@ NgxSkeletonLoaderModule.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * Generated from: ngx-skeleton-loader.ts
+ * Generated from: ngx-skeletor-loader.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 export { NGX_SKELETON_LOADER_CONFIG, NgxSkeletonLoaderComponent, NgxSkeletonLoaderModule };
 
-//# sourceMappingURL=ngx-skeleton-loader.js.map
+//# sourceMappingURL=ngx-skeletor-loader.js.map

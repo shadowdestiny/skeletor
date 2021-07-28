@@ -1,22 +1,22 @@
 # NGX Skeleton loader
 
-[![npm downloads](https://img.shields.io/npm/dm/ngx-skeleton-loader.svg)](https://npmjs.org/ngx-skeleton-loader)
-[![npm](https://img.shields.io/badge/stackblitz-online-orange.svg)](https://stackblitz.com/edit/ngx-skeleton-loader-sample)
-[![npm](https://img.shields.io/badge/stackblitz-online-orange.svg)](https://stackblitz.com/edit/ngx-skeleton-loader-user-card-component-sample)
+[![npm downloads](https://img.shields.io/npm/dm/ngx-skeletor-loader.svg)](https://npmjs.org/ngx-skeletor-loader)
+[![npm](https://img.shields.io/badge/stackblitz-online-orange.svg)](https://stackblitz.com/edit/ngx-skeletor-loader-sample)
+[![npm](https://img.shields.io/badge/stackblitz-online-orange.svg)](https://stackblitz.com/edit/ngx-skeletor-loader-user-card-component-sample)
 
-[![NPM](https://nodei.co/npm/ngx-skeleton-loader.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/ngx-skeleton-loader)
-[![NPM](https://nodei.co/npm-dl/ngx-skeleton-loader.png?height=3&months=3)](https://npmjs.org/ngx-skeleton-loader)
+[![NPM](https://nodei.co/npm/ngx-skeletor-loader.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/ngx-skeletor-loader)
+[![NPM](https://nodei.co/npm-dl/ngx-skeletor-loader.png?height=3&months=3)](https://npmjs.org/ngx-skeletor-loader)
 
-[![Build Status](https://circleci.com/gh/willmendesneto/ngx-skeleton-loader.svg?style=shield)](https://circleci.com/gh/willmendesneto/ngx-skeleton-loader)
-[![Coverage Status](https://coveralls.io/repos/willmendesneto/ngx-skeleton-loader/badge.svg?branch=master)](https://coveralls.io/r/willmendesneto/ngx-skeleton-loader?branch=master)
-[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/ngx-skeleton-loader.svg)](https://bundlephobia.com/result?p=ngx-skeleton-loader)
+[![Build Status](https://circleci.com/gh/willmendesneto/ngx-skeletor-loader.svg?style=shield)](https://circleci.com/gh/willmendesneto/ngx-skeletor-loader)
+[![Coverage Status](https://coveralls.io/repos/willmendesneto/ngx-skeletor-loader/badge.svg?branch=master)](https://coveralls.io/r/willmendesneto/ngx-skeletor-loader?branch=master)
+[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/ngx-skeletor-loader.svg)](https://bundlephobia.com/result?p=ngx-skeletor-loader)
 [![npm](https://img.shields.io/npm/l/express.svg?maxAge=2592000)](/LICENSE)
 
-![ngx-skeleton-loader in action](https://user-images.githubusercontent.com/1252570/50053778-d4e0d900-018e-11e9-9de7-fad6f9fddd9e.gif)
+![ngx-skeletor-loader in action](https://user-images.githubusercontent.com/1252570/50053778-d4e0d900-018e-11e9-9de7-fad6f9fddd9e.gif)
 
-## Why skeletons?
+## Why skeletors?
 
-> If you want to get more details about that, please read ["NGX-Skeleton-Loader — States, Animations, Performance, and Accessibility for your Angular App"](https://willmendesneto.com/posts/ngx-skeleton-loader-states-animations-performance-and-accessibility-for-your-angular-app) blog post
+> If you want to get more details about that, please read ["NGX-Skeleton-Loader — States, Animations, Performance, and Accessibility for your Angular App"](https://willmendesneto.com/posts/ngx-skeletor-loader-states-animations-performance-and-accessibility-for-your-angular-app) blog post
 
 The idea of this component is make the process transparent and easier. So the main point is integrate this component with other tooling process, such as:
 
@@ -36,24 +36,24 @@ It's totally transparent for you and you can integrate easier in your applicatio
 
 Try out our demos on Stackblitz!
 
-- [Usage: animations, appearance, and themes](https://ngx-skeleton-loader-sample.stackblitz.io)
-- [User Card Component Loading simulation using NGX Skeleton Loader](https://ngx-skeleton-loader-user-card-component-sample.stackblitz.io)
+- [Usage: animations, appearance, and themes](https://ngx-skeletor-loader-sample.stackblitz.io)
+- [User Card Component Loading simulation using NGX Skeleton Loader](https://ngx-skeletor-loader-user-card-component-sample.stackblitz.io)
 
 ## Install
 
-You can get it on NPM installing `ngx-skeleton-loader` module as a project dependency.
+You can get it on NPM installing `ngx-skeletor-loader` module as a project dependency.
 
 ```shell
-npm install ngx-skeleton-loader --save
+npm install ngx-skeletor-loader --save
 ```
 
 ## Setup
 
-You'll need to add `NgxSkeletonLoaderModule` to your application module. So that, the `<ngx-skeleton-loader>` components will be accessible in your application.
+You'll need to add `NgxSkeletonLoaderModule` to your application module. So that, the `<ngx-skeletor-loader>` components will be accessible in your application.
 
 ```typescript
 ...
-import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { NgxSkeletonLoaderModule } from 'ngx-skeletor-loader';
 ...
 
 @NgModule({
@@ -73,13 +73,13 @@ export class YourAppComponent {}
 
 ```
 
-After that, you can use the `ngx-skeleton-loader` components in your templates, passing the configuration data into the component itself.
+After that, you can use the `ngx-skeletor-loader` components in your templates, passing the configuration data into the component itself.
 
-- `ngx-skeleton-loader`: Handle the skeleton animation and the skeleton styles of your app;
+- `ngx-skeletor-loader`: Handle the skeletor animation and the skeletor styles of your app;
 
 ```html
 <div class="item">
-  <ngx-skeleton-loader count="5" appearance="circle"></ngx-skeleton-loader>
+  <ngx-skeletor-loader count="5" appearance="circle"></ngx-skeletor-loader>
 </div>
 ```
 
@@ -87,11 +87,11 @@ After that, you can use the `ngx-skeleton-loader` components in your templates, 
 
 Also, you can import the module in your app by calling `NgxSkeletonLoaderModule.forRoot()` when adding it. So it will be available across your Angular application.
 
-Importing the module this way also allows you to globally configure the default values for the `ngx-skeleton-loader` components in your application, in case you need some different default values for your app.
+Importing the module this way also allows you to globally configure the default values for the `ngx-skeletor-loader` components in your application, in case you need some different default values for your app.
 
 ```typescript
 ...
-import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { NgxSkeletonLoaderModule } from 'ngx-skeletor-loader';
 ...
 
 @NgModule({
@@ -113,7 +113,7 @@ export class YourAppComponent {}
 
 ```html
 <div class="item">
-  <ngx-skeleton-loader count="5" appearance="circle"></ngx-skeleton-loader>
+  <ngx-skeletor-loader count="5" appearance="circle"></ngx-skeletor-loader>
   <!-- above line will produce the rendering of 5 circles with the pulse animation and the aria-valuetext attribute set with "This item is actually loading..." -->
 </div>
 ```
@@ -125,17 +125,17 @@ export class YourAppComponent {}
 
 ## Appearance
 
-You can also define which appearance want to use in your skeleton loader by passing the options in your component via `[appearance]` attribute.
+You can also define which appearance want to use in your skeletor loader by passing the options in your component via `[appearance]` attribute.
 
 ### Options
 
 - `''` - _default_: it will use it `''` as appearance. At the end, it will render like a line;
 - `line`: it will render like a line. This is the same behavior as passing an empty string;
-- `circle`: it will use `circle` as appearance. Great for avatar skeletons, for example :);
+- `circle`: it will use `circle` as appearance. Great for avatar skeletors, for example :);
 
 ## Animations
 
-You can also define which CSS animation you want to use - even not use any, if it's the case - in your skeleton loader by passing the options in your component via `[animation]` attribute.
+You can also define which CSS animation you want to use - even not use any, if it's the case - in your skeletor loader by passing the options in your component via `[animation]` attribute.
 
 ### Options
 
@@ -151,37 +151,37 @@ You can also define which CSS animation you want to use - even not use any, if i
 <!--
 If you need to change all the background wrapper
 you need to apply the style changes on the 
-`ngx-skeleton-loader` component wrapper
+`ngx-skeletor-loader` component wrapper
 -->
 <div class="item">
   <!-- Disables the animation -->
-  <ngx-skeleton-loader animation="false"></ngx-skeleton-loader>
+  <ngx-skeletor-loader animation="false"></ngx-skeletor-loader>
   <!-- Disables the animation, but receiving boolean value from binding -->
   <!-- Via binding it can receive `false` (boolean), "false" (string), or any other animation type -->
-  <ngx-skeleton-loader [animation]="classAttributeWithBooleanFalseValue"></ngx-skeleton-loader>
+  <ngx-skeletor-loader [animation]="classAttributeWithBooleanFalseValue"></ngx-skeletor-loader>
   <!-- Uses `progress` as animation -->
-  <ngx-skeleton-loader animation="progress"></ngx-skeleton-loader>
-  <ngx-skeleton-loader></ngx-skeleton-loader>
+  <ngx-skeletor-loader animation="progress"></ngx-skeletor-loader>
+  <ngx-skeletor-loader></ngx-skeletor-loader>
   <!-- Uses `pulse` as animation -->
-  <ngx-skeleton-loader animation="pulse"></ngx-skeleton-loader>
+  <ngx-skeletor-loader animation="pulse"></ngx-skeletor-loader>
 </div>
 ```
 
-> You can check the code details in the [Stackblitz Live Demo Link](https://stackblitz.com/edit/ngx-skeleton-loader-sample?file=app%2Fapp.component.html)
+> You can check the code details in the [Stackblitz Live Demo Link](https://stackblitz.com/edit/ngx-skeletor-loader-sample?file=app%2Fapp.component.html)
 
 ## Theming
 
-You can also define different styles for the skeleton loader by passing an object with the css styles - in dashed case - into the component via `[theme]` attribute.
+You can also define different styles for the skeletor loader by passing an object with the css styles - in dashed case - into the component via `[theme]` attribute.
 
 ```html
 <!--
 If you need to change all the background wrapper
 you need to apply the style changes on the 
-`ngx-skeleton-loader` component wrapper
+`ngx-skeletor-loader` component wrapper
 -->
 
 <div style="background: #FF0001; padding: 10px;">
-  <ngx-skeleton-loader
+  <ngx-skeletor-loader
     count="5"
     [theme]="{ 
       'border-radius': '5px',
@@ -189,7 +189,7 @@ you need to apply the style changes on the
       'background-color': '#992929',
       border: '1px solid white'
     }"
-  ></ngx-skeleton-loader>
+  ></ngx-skeletor-loader>
 </div>
 ```
 
@@ -201,13 +201,13 @@ Note that we are using a combination of styles and ngStyle inside theme object,
 having `height.px` receiving a number and `background-color` receiving a HEX Color
 -->
 <div style="background: #FF0001; padding: 10px;">
-  <ngx-skeleton-loader
+  <ngx-skeletor-loader
     count="5"
     [theme]="{ 
       'height.px': 50,
       'background-color': '#992929'
     }"
-  ></ngx-skeleton-loader>
+  ></ngx-skeletor-loader>
 </div>
 ```
 
@@ -216,7 +216,7 @@ having `height.px` receiving a number and `background-color` receiving a HEX Col
 Also, you can use CSS to add theme styles into your component. However, there are some implications:
 
 - You're using `:host` in your stylesheet, which means **you are aware of any possible problem `:host` can create for your app at that level since it's based on [`:host` DOM style scoping](https://developer.mozilla.org/en-US/docs/Web/CSS/:host)**
-- You're adding stylesheet based on `<ngx-skeleton-loader>` internal classes. It means that **class naming changes on module's side will be breaking changes for your application as well**.
+- You're adding stylesheet based on `<ngx-skeletor-loader>` internal classes. It means that **class naming changes on module's side will be breaking changes for your application as well**.
 
 As an example, your Component file is like this
 
@@ -224,9 +224,9 @@ As an example, your Component file is like this
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-ngx-skeleton-loader-with-theming',
-  templateUrl: './my-ngx-skeleton-loader-with-theming.component.html',
-  styleUrls: ['./my-ngx-skeleton-loader-with-theming.component.css'],
+  selector: 'my-ngx-skeletor-loader-with-theming',
+  templateUrl: './my-ngx-skeletor-loader-with-theming.component.html',
+  styleUrls: ['./my-ngx-skeletor-loader-with-theming.component.css'],
 })
 export class MyNGXSkeletonLoaderWithThemingComponent {
   /* ... code goes here*/
@@ -237,23 +237,23 @@ And your component HTML code is
 
 ```html
 <!--
-file: my-ngx-skeleton-loader-with-theming.component.html
+file: my-ngx-skeletor-loader-with-theming.component.html
 
 As an example, it's not using themes via [theme] attributes.
 -->
 
-<ngx-skeleton-loader count="5" animation="pulse"></ngx-skeleton-loader>
+<ngx-skeletor-loader count="5" animation="pulse"></ngx-skeletor-loader>
 ```
 
 You can apply theme changes in our stylesheet. At the end it will be
 
 ```css
-/* file: `my-ngx-skeleton-loader-with-theming.component.css`
+/* file: `my-ngx-skeletor-loader-with-theming.component.css`
  *
  * You can find more details about `:host` at
  * Angular Component Style Docs https://angular.io/guide/component-styles#host
  */
-:host >>> ngx-skeleton-loader .loader {
+:host >>> ngx-skeletor-loader .loader {
   border-radius: 5px;
   height: 50px;
   background-color: #992929;
@@ -261,7 +261,7 @@ You can apply theme changes in our stylesheet. At the end it will be
 }
 ```
 
-> You should change the styles on the skeleton wrapper element in case you need to change the background color. You can check the code details in the [Stackblitz Live Demo Link](https://stackblitz.com/edit/ngx-skeleton-loader-sample?file=app%2Fapp.component.html) or check it out a content load simulation [in this Stackblitz Live Demo Link](https://stackblitz.com/edit/ngx-skeleton-loader-user-card-component-sample?file=app%2Fapp.component.html)
+> You should change the styles on the skeletor wrapper element in case you need to change the background color. You can check the code details in the [Stackblitz Live Demo Link](https://stackblitz.com/edit/ngx-skeletor-loader-sample?file=app%2Fapp.component.html) or check it out a content load simulation [in this Stackblitz Live Demo Link](https://stackblitz.com/edit/ngx-skeletor-loader-user-card-component-sample?file=app%2Fapp.component.html)
 
 ## Development
 
@@ -275,13 +275,13 @@ You can apply theme changes in our stylesheet. At the end it will be
 
 ### Publish
 
-this project is using `np` package to publish, which makes things straightforward. EX: `np <patch|minor|major> --contents=dist/ngx-skeleton-loader`
+this project is using `np` package to publish, which makes things straightforward. EX: `np <patch|minor|major> --contents=dist/ngx-skeletor-loader`
 
 > For more details, [please check np package on npmjs.com](https://www.npmjs.com/package/np)
 
 ## Contribute
 
-For any type of contribution, please follow the instructions in [CONTRIBUTING.md](https://github.com/willmendesneto/ngx-skeleton-loader/blob/master/CONTRIBUTING.md) and read [CODE_OF_CONDUCT.md](https://github.com/willmendesneto/ngx-skeleton-loader/blob/master/CODE_OF_CONDUCT.md) files.
+For any type of contribution, please follow the instructions in [CONTRIBUTING.md](https://github.com/willmendesneto/ngx-skeletor-loader/blob/master/CONTRIBUTING.md) and read [CODE_OF_CONDUCT.md](https://github.com/willmendesneto/ngx-skeletor-loader/blob/master/CODE_OF_CONDUCT.md) files.
 
 ## Author
 
@@ -289,5 +289,3 @@ For any type of contribution, please follow the instructions in [CONTRIBUTING.md
 
 - <https://twitter.com/willmendesneto>
 - <http://github.com/willmendesneto>
-
-**Luis Marin (shadowdestiny)** (modifify)

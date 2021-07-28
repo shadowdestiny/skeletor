@@ -77,7 +77,7 @@ Thanks @rkristelijn for raising the issue and the pull request!
 
 ### Fixed
 
-- Using `ngAcceptInputType_count` for template checking in count input. That solves issue https://github.com/willmendesneto/ngx-skeleton-loader/issues/59. You can find more details about it in https://angular.io/guide/template-typecheck
+- Using `ngAcceptInputType_count` for template checking in count input. That solves issue https://github.com/willmendesneto/ngx-skeletor-loader/issues/59. You can find more details about it in https://angular.io/guide/template-typecheck
 - Fixing type issues on `yarn build:ssr` command
 
 ### Updated
@@ -96,28 +96,28 @@ Thanks @rkristelijn for raising the issue and the pull request!
 <!-- Passing loading text to be used as WAI-ARIA `aria-valuetext` -->
 <!-- In this case, it will render the component using "Please wait ..." -->
 <!-- Otherwise, it defaults to "Loading..." -->
-<div class="skeleton-with-specific-loading-text">
-  <ngx-skeleton-loader loadingText="Please wait ..."></ngx-skeleton-loader>
+<div class="skeletor-with-specific-loading-text">
+  <ngx-skeletor-loader loadingText="Please wait ..."></ngx-skeletor-loader>
 </div>
 ```
 
 ### Updated
 
-- Using OnPush as changeDetection mechanism into ngx-skeleton-loader component
-- Adding ability to pass `false` as string or boolean (coming from variable value via binding) on `animation` attribute in `ngx-skeleton-loader` component configuration. animation will receive `false` as string when attribute field it's not using binding. Component now can receive `false` (boolean), "false" (string), or any other animation type via binding.
+- Using OnPush as changeDetection mechanism into ngx-skeletor-loader component
+- Adding ability to pass `false` as string or boolean (coming from variable value via binding) on `animation` attribute in `ngx-skeletor-loader` component configuration. animation will receive `false` as string when attribute field it's not using binding. Component now can receive `false` (boolean), "false" (string), or any other animation type via binding.
 
 ```html
 <div class="item">
   <!-- Disables the animation -->
-  <ngx-skeleton-loader animation="false"></ngx-skeleton-loader>
+  <ngx-skeletor-loader animation="false"></ngx-skeletor-loader>
   <!-- Disables the animation, but receiving boolean value from binding -->
   <!-- Via binding it can receive `false` (boolean), "false" (string), or any other animation type -->
-  <ngx-skeleton-loader [animation]="classAttributeWithBooleanFalseValue"></ngx-skeleton-loader>
+  <ngx-skeletor-loader [animation]="classAttributeWithBooleanFalseValue"></ngx-skeletor-loader>
   <!-- Uses `progress` as animation -->
-  <ngx-skeleton-loader animation="progress"></ngx-skeleton-loader>
-  <ngx-skeleton-loader></ngx-skeleton-loader>
+  <ngx-skeletor-loader animation="progress"></ngx-skeletor-loader>
+  <ngx-skeletor-loader></ngx-skeletor-loader>
   <!-- Uses `pulse` as animation -->
-  <ngx-skeleton-loader animation="pulse"></ngx-skeleton-loader>
+  <ngx-skeletor-loader animation="pulse"></ngx-skeletor-loader>
 </div>
 ```
 
@@ -125,7 +125,7 @@ Thanks @rkristelijn for raising the issue and the pull request!
 
 ### Fixed
 
-- Removing Lighthouse "Avoid non-composited animations" issue. Lighthouse shows warnings from ngx-skeleton-loader.scss -file (progress).
+- Removing Lighthouse "Avoid non-composited animations" issue. Lighthouse shows warnings from ngx-skeletor-loader.scss -file (progress).
 
 - "Avoid non-composited animations":
 - "Animations which are not composited can be janky and contribute to CLS"
@@ -136,7 +136,7 @@ To solve that, instead of using CSS `background-position` the module is now usin
 
 ### Fixed
 
-- Solving `forRoot()` types error `Generic type 'ModuleWithProviders<T>' requires 1 type argument(s)`. Closes https://github.com/willmendesneto/ngx-skeleton-loader/issues/51
+- Solving `forRoot()` types error `Generic type 'ModuleWithProviders<T>' requires 1 type argument(s)`. Closes https://github.com/willmendesneto/ngx-skeletor-loader/issues/51
 
 ## [2.6.0][] - 2020-11-15
 
@@ -146,7 +146,7 @@ To solve that, instead of using CSS `background-position` the module is now usin
 
 ```js
 import { NgModule } from '@angular/core';
-import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { NgxSkeletonLoaderModule } from 'ngx-skeletor-loader';
 // ... list of other app dependencies
 
 import { AppComponent } from './app.component';
@@ -171,7 +171,7 @@ export class AppModule {}
 
 - Upgrading NodeJS to v14.11.0
 - Updating `perf-marks` package to v1.14.0
-- Improving skeleton animations fps by using `cubic-bezier` instead of `ease-in-out`
+- Improving skeletor animations fps by using `cubic-bezier` instead of `ease-in-out`
 
 ## [2.4.4][] - 2020-08-21
 
@@ -210,8 +210,8 @@ export class AppModule {}
 
 ### Updated
 
-- Updating examples with new skeleton simulation
-- Adding Stackblitz link for user card skeleton loading demo
+- Updating examples with new skeletor simulation
+- Adding Stackblitz link for user card skeletor loading demo
 
 ## [2.3.0][] - 2020-08-01
 
@@ -221,8 +221,8 @@ export class AppModule {}
 
 ### Updated
 
-- Updating examples with new skeleton simulation
-- Adding Stackblitz link for user card skeleton loading demo
+- Updating examples with new skeletor simulation
+- Adding Stackblitz link for user card skeletor loading demo
 
 ## [2.2.1][] - 2020-06-30
 
@@ -259,7 +259,7 @@ export class AppModule {}
 - Supporting for new animation `progress-dark` to enable users when using theme with darker color schema
 - Supporting for different animations 🎉
 
-Now we can define the animation we want to use in `<ngx-skeleton-loader>` component via `animation` input. It's a string that can defined the animation used during the loading, having as options:
+Now we can define the animation we want to use in `<ngx-skeletor-loader>` component via `animation` input. It's a string that can defined the animation used during the loading, having as options:
 
 - `false`: it will disable the animation;
 - `progress` - _default_: it will use it `progress` as animation;
@@ -270,12 +270,12 @@ Now we can define the animation we want to use in `<ngx-skeleton-loader>` compon
 ```html
 <div class="item">
   <!-- Disables the animation -->
-  <ngx-skeleton-loader animation="false"></ngx-skeleton-loader>
+  <ngx-skeletor-loader animation="false"></ngx-skeletor-loader>
   <!-- Uses `progress` as animation -->
-  <ngx-skeleton-loader animation="progress"></ngx-skeleton-loader>
-  <ngx-skeleton-loader></ngx-skeleton-loader>
+  <ngx-skeletor-loader animation="progress"></ngx-skeletor-loader>
+  <ngx-skeletor-loader></ngx-skeletor-loader>
   <!-- Uses `pulse` as animation -->
-  <ngx-skeleton-loader animation="pulse"></ngx-skeleton-loader>
+  <ngx-skeletor-loader animation="pulse"></ngx-skeletor-loader>
 </div>
 ```
 
@@ -286,7 +286,7 @@ Now we can define the animation we want to use in `<ngx-skeleton-loader>` compon
 
 ```js
 <div class="item">
-  <ngx-skeleton-loader animation="false"></ngx-skeleton-loader>
+  <ngx-skeletor-loader animation="false"></ngx-skeletor-loader>
 </div>
 ```
 
@@ -348,7 +348,7 @@ Now we can define the animation we want to use in `<ngx-skeleton-loader>` compon
 
 ### Updated
 
-- Removing unnecessary CSS styles for skeleton
+- Removing unnecessary CSS styles for skeletor
 
 ## [1.1.1][] - 2018-12-17
 
@@ -365,12 +365,12 @@ Now we can define the animation we want to use in `<ngx-skeleton-loader>` compon
 - Added Coveralls integration
 - Added GitHub templates
 - Added `CODE_OF_CONDUCT.md` with the Code of conduct
-- Added unit tests for skeletons and demo components
+- Added unit tests for skeletors and demo components
 
 ### Updated
 
 - Decreased bundle size
-- New gif showing `ngx-skeleton-loader` in action
+- New gif showing `ngx-skeletor-loader` in action
 
 ## [1.0.2][] - 2018-12-16
 
@@ -394,78 +394,78 @@ Now we can define the animation we want to use in `<ngx-skeleton-loader>` compon
 
 ### Added
 
-- Created `ngx-skeleton-loader`
+- Created `ngx-skeletor-loader`
 - Created test automation for the module
 
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v0.0.1...HEAD
-[0.0.1]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v0.0.1
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v1.0.0
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.0.2...HEAD
-[1.0.2]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.0.1...v1.0.2
-[1.0.1]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v1.0.1
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.0.2...HEAD
-[1.0.2]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v1.0.2
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.1.0...HEAD
-[1.1.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v1.1.0
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.1.1...HEAD
-[1.1.1]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v1.1.1
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.2.4...HEAD
-[1.2.4]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.2.3...v1.2.4
-[1.2.3]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.2.2...v1.2.3
-[1.2.2]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.2.1...v1.2.2
-[1.2.1]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.2.0...v1.2.1
-[1.2.0]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.1.2...v1.2.0
-[1.1.2]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v1.1.2
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.2.5...HEAD
-[1.2.5]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v1.2.5
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.2.6...HEAD
-[1.2.6]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v1.2.6
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v1.2.7...HEAD
-[1.2.7]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v1.2.7
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.0.0...HEAD
-[2.0.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.0.0
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.1.0...HEAD
-[2.1.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.1.0
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.2.0...HEAD
-[2.2.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.2.0
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.2.1...HEAD
-[2.2.1]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.2.1
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.3.0...HEAD
-[2.3.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.3.0
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.4.0...HEAD
-[2.4.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.4.0
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.4.1...HEAD
-[2.4.1]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.4.1
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.4.2...HEAD
-[2.4.2]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.4.2
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.4.3...HEAD
-[2.4.3]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.4.3
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.4.4...HEAD
-[2.4.4]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.4.4
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.5.0...HEAD
-[2.5.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.5.0
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.6.0...HEAD
-[2.6.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.6.0
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.6.1...HEAD
-[2.6.1]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.6.1
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.6.2...HEAD
-[2.6.2]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.6.2
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.7.0...HEAD
-[2.7.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.7.0
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.8.0...HEAD
-[2.8.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.8.0
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.9.0...HEAD
-[2.9.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.9.0
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.9.1...HEAD
-[2.9.1]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.9.1
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.9.2...HEAD
-[2.9.2]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.9.2
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.10.0...HEAD
-[2.10.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.10.0
-[unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v2.10.1...HEAD
-[2.10.1]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v2.10.1
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v0.0.1
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v1.0.0
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v1.0.1
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v1.0.2
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v1.1.0
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v1.1.1
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.2.4...HEAD
+[1.2.4]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.2.3...v1.2.4
+[1.2.3]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.2.2...v1.2.3
+[1.2.2]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.2.1...v1.2.2
+[1.2.1]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.2.0...v1.2.1
+[1.2.0]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.1.2...v1.2.0
+[1.1.2]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v1.1.2
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.2.5...HEAD
+[1.2.5]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v1.2.5
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.2.6...HEAD
+[1.2.6]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v1.2.6
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v1.2.7...HEAD
+[1.2.7]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v1.2.7
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.0.0
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.1.0
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.2.0...HEAD
+[2.2.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.2.0
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.2.1...HEAD
+[2.2.1]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.2.1
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.3.0...HEAD
+[2.3.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.3.0
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.4.0...HEAD
+[2.4.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.4.0
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.4.1...HEAD
+[2.4.1]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.4.1
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.4.2...HEAD
+[2.4.2]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.4.2
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.4.3...HEAD
+[2.4.3]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.4.3
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.4.4...HEAD
+[2.4.4]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.4.4
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.5.0...HEAD
+[2.5.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.5.0
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.6.0...HEAD
+[2.6.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.6.0
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.6.1...HEAD
+[2.6.1]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.6.1
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.6.2...HEAD
+[2.6.2]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.6.2
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.7.0...HEAD
+[2.7.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.7.0
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.8.0...HEAD
+[2.8.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.8.0
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.9.0...HEAD
+[2.9.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.9.0
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.9.1...HEAD
+[2.9.1]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.9.1
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.9.2...HEAD
+[2.9.2]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.9.2
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.10.0...HEAD
+[2.10.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.10.0
+[unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v2.10.1...HEAD
+[2.10.1]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v2.10.1
 
 
-[Unreleased]: https://github.com/willmendesneto/ngx-skeleton-loader/compare/v3.0.0...HEAD
-[3.0.0]: https://github.com/willmendesneto/ngx-skeleton-loader/tree/v3.0.0
+[Unreleased]: https://github.com/willmendesneto/ngx-skeletor-loader/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/willmendesneto/ngx-skeletor-loader/tree/v3.0.0

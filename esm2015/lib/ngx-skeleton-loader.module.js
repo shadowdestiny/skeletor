@@ -1,12 +1,12 @@
 /**
  * @fileoverview added by tsickle
- * Generated from: lib/ngx-skeleton-loader.module.ts
+ * Generated from: lib/ngx-skeletor-loader.module.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgxSkeletonLoaderComponent } from './ngx-skeleton-loader.component';
-import { NGX_SKELETON_LOADER_CONFIG } from './ngx-skeleton-loader-config.types';
+import { NgxSkeletonLoaderComponent } from './ngx-skeletor-loader.component';
+import { NGX_SKELETON_LOADER_CONFIG } from './ngx-skeletor-loader-config.types';
 export class NgxSkeletonLoaderModule {
     /**
      * @param {?=} parentModule

@@ -1,7 +1,7 @@
 import { ModuleWithProviders } from '@angular/core';
-import { NgxSkeletonLoaderConfig } from './ngx-skeleton-loader-config.types';
+import { NgxSkeletonLoaderConfig } from './ngx-skeletor-loader-config.types';
 import * as ɵngcc0 from '@angular/core';
-import * as ɵngcc1 from './ngx-skeleton-loader.component';
+import * as ɵngcc1 from './ngx-skeletor-loader.component';
 import * as ɵngcc2 from '@angular/common';
 export declare class NgxSkeletonLoaderModule {
     constructor(parentModule?: NgxSkeletonLoaderModule);

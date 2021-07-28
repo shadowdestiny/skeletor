@@ -1,6 +1,6 @@
 /**
  * @fileoverview added by tsickle
- * Generated from: ngx-skeleton-loader.ts
+ * Generated from: ngx-skeletor-loader.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
