@@ -1,0 +1,6 @@
+import { ModuleWithProviders } from '@angular/core';
+import { NgxSkeletonLoaderConfig } from './ngx-skeleton-loader-config.types';
+export declare class NgxSkeletonLoaderModule {
+    constructor(parentModule?: NgxSkeletonLoaderModule);
+    static forRoot(config?: Partial<NgxSkeletonLoaderConfig>): ModuleWithProviders<NgxSkeletonLoaderModule>;
+}
