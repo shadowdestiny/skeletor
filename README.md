@@ -289,3 +289,5 @@ For any type of contribution, please follow the instructions in [CONTRIBUTING.md
 
 - <https://twitter.com/willmendesneto>
 - <http://github.com/willmendesneto>
+
+**Luis Marin (shadowdestiny)** (modifify)
