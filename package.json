@@ -1,0 +1,79 @@
+{
+  "_from": "ngx-skeletor-loader",
+  "_id": "ngx-skeletor-loader@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-hOjfaXLEH7MF1FdQgqP1x8KiZXwVaA8KcXC3j4f1P2xIWW0mWJnGV1CG1SDcczJaA3VkuL4ULwNXIobInSU2MQ==",
+  "_location": "/ngx-skeletor-loader",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "ngx-skeletor-loader",
+    "name": "ngx-skeletor-loader",
+    "escapedName": "ngx-skeletor-loader",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_shasum": "3dd0aa6f3aff317be3ede2c24418a0fc54cb761a",
+  "_spec": "ngx-skeletor-loader",
+  "bugs": {
+    "url": "https://github.com/willmendesneto/ngx-skeletor-loader/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "perf-marks": "^1.13.4",
+    "tslib": "^1.10.0"
+  },
+  "deprecated": false,
+  "description": "Make beautiful, animated loading skeletors that automatically adapt to your Angular apps",
+  "es2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/ngx-skeletor-loader.js",
+  "es2015": "fesm2015/ngx-skeletor-loader.js",
+  "esm2015": "esm2015/ngx-skeletor-loader.js",
+  "fesm2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/ngx-skeletor-loader.js",
+  "fesm2015": "fesm2015/ngx-skeletor-loader.js",
+  "homepage": "https://github.com/willmendesneto/ngx-skeletor-loader#readme",
+  "keywords": [
+    "angular",
+    "ngx",
+    "skeletor",
+    "ghost",
+    "loader",
+    "ngx-skeletor-loader",
+    "facebook-loading",
+    "loading",
+    "skeletor-loader",
+    "skeletor-animation",
+    "animation"
+  ],
+  "license": "MIT",
+  "main": "bundles/ngx-skeletor-loader.umd.js",
+  "metadata": "ngx-skeletor-loader.metadata.json",
+  "module_ivy_ngcc": "__ivy_ngcc__/fesm2015/ngx-skeletor-loader.js",
+  "module": "fesm2015/ngx-skeletor-loader.js",
+  "name": "ngx-skeletor-loader",
+  "peerDependencies": {
+    "@angular/common": ">=8.0.0",
+    "@angular/core": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willmendesneto/ngx-skeletor-loader.git"
+  },
+  "sideEffects": false,
+  "typings": "ngx-skeletor-loader.d.ts",
+  "version": "3.0.0",
+  "__processed_by_ivy_ngcc__": {
+    "es2015": "9.1.13",
+    "fesm2015": "9.1.13",
+    "module": "9.1.13",
+    "typings": "9.1.13"
+  },
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
+  }
+}
